@@ -1,5 +1,6 @@
 class PrototypesController < ApplicationController
   before_action :move_to_index, only: [:edit,:update]
+  before_action :authenticate_user!, only: :new
 
   
   def index
